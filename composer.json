@@ -1,0 +1,15 @@
+{
+  "name": "marczijderveld/web-data-endpoint",
+  "type": "wordpress-muplugin",
+  "authors": [
+    {
+      "name": "Marc Zijderveld",
+      "homepage": "https://github.com/MarcZijderveld"
+    }
+  ],
+  "autoload": {
+    "psr-4":{
+      "DataEndpoint\\": "."
+    }
+  }
+}
