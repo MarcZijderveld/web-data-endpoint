@@ -41,10 +41,14 @@ class web_data_endpoint {
      *
      * @param $data
      */
-    public function callback($data) {
-        if($data['token'] === get_option('web-data-options')["token"]) {
-            echo json_encode(get_option("monsterinsights_report_overview_pageviews", array()));
-            exit;
+    public function callback($data)
+    {
+        if (isset($data['token']))
+        {
+            if($data['token'] === get_option('web-data-options')["token"]) {
+                echo json_encode(get_option("monsterinsights_report_overview_pageviews", array()));
+                exit;
+            }
         }
         else {
             $json["error"] = "Invalid token provided, please check the wp-admin for the correct access token";
