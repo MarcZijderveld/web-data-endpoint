@@ -46,7 +46,7 @@ class web_data_endpoint {
         if (isset($data['token']))
         {
             if($data['token'] === get_option('web-data-options')["token"]) {
-                echo json_encode(get_option("monsterinsights_report_overview_pageviews", array()));
+                echo json_encode(get_option("monsterinsights_report_data_overview", array()));
                 exit;
             }
         }
